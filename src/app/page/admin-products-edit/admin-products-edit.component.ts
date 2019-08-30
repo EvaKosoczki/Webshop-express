@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AdminProductsEditComponent implements OnInit {
   oneProduct: Products;
   selectedProductId: number = 0;
+  
   constructor(private productsService: ProductService,
     private ar: ActivatedRoute, private router: Router) {
     this.ar.params.forEach(
@@ -34,12 +35,10 @@ export class AdminProductsEditComponent implements OnInit {
         response => {
           console.log("sikeres")
         },
-        err => {
-          console.error(err),
-            this.router.navigateByUrl("/admin/products")
-        }
-
-      )
+        err =>{
+          this.router.navigateByUrl("/admin/products")
+          console.error(err)
+        })
   }
   onCancel() {
     this.router.navigateByUrl("/admin/products")

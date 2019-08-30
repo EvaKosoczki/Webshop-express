@@ -8,12 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NewOrderService {
 
-  apiUrl: string = 'http://localhost:3693/orders';
+  apiUrl: string = 'http://localhost:3210/api/orders';
 
   constructor(
     private http: HttpClient
   ) { }
-  
+
   getAll(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
@@ -26,7 +26,7 @@ export class NewOrderService {
     return this.http.put<Order>(`${this.apiUrl}/${order.id}`, order);
   }
 
-  newOrder(data): Observable<Order> {
-    return this.http.put<Order>(this.apiUrl, data);
+  newOrder(data: Order): Observable<Order> {
+    return this.http.post<Order>(this.apiUrl, data);
   }
 }

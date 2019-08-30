@@ -46,6 +46,7 @@ class DataBase {
       })
     })
   }
+  
 }
 
 module.exports = {

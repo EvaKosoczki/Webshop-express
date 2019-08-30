@@ -40,7 +40,7 @@ export class ProductDetailComponent implements OnInit {
     this.productService.getProductByID(this.selectedProductId).subscribe(
       response => {
         this.oneProduct = response;
-        this.oneProduct = this.oneProduct[0];
+        //this.oneProduct = this.oneProduct[0];
       }
     );
     this.orderService.getAll().subscribe(
@@ -56,9 +56,7 @@ export class ProductDetailComponent implements OnInit {
     ev.preventDefault();
     this.newOrder.insdate = this.getActualDate();
     console.log(this.newOrder);
-    this.orderString = JSON.stringify(this.newOrder);
-    console.log(this.orderString);
-    this.orderService.newOrder(JSON.stringify(this.orderString)).subscribe(
+    this.orderService.newOrder(this.newOrder).subscribe(
       response => {
         console.log('sikeres');
       },

@@ -19,11 +19,11 @@ export class AdminProductsAddComponent implements OnInit {
     this.productService.addOne(this.addProduct).subscribe(
       response => {
         console.log('sikeres');
+        this.router.navigateByUrl("/admin/products")
       },
-      err => {
+      err =>
         console.error(err),
-          this.router.navigateByUrl("/admin/products")
-      }
+
     )
   }
   onCancel() {

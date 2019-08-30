@@ -10,19 +10,19 @@ import { Product } from '../../model/product/product';
 })
 export class ProductService {
 
-  jsonUrl = 'http://localhost:3210/product';
-  dataPath = 'http://localhost:3456/';
+  jsonUrl = 'http://localhost:3210/api/product';
+  dataPath = 'http://localhost:3210/api/product';
 
   constructor(
     private http: HttpClient
   ) { }
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.dataPath);
+    return this.http.get<Product[]>(this.jsonUrl);
   }
 
   getProductByID(id: number): Observable<Product> {
-    return this.http.get<Product>(`${this.dataPath}/${id}`);
+    return this.http.get<Product>(`${this.jsonUrl}/${id}`);
   }
 
   createProduct(product: Product): Observable<Product> {
@@ -54,7 +54,7 @@ export class ProductService {
   }
 
   addOne(data): Observable<Products> {
-    return this.http.put<Products>(this.jsonUrl, data)
+    return this.http.post<Products>(this.jsonUrl, data)
   }
 
 }

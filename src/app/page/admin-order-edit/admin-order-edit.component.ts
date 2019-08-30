@@ -36,9 +36,10 @@ export class AdminOrderEditComponent implements OnInit {
       orderData => {
         console.log('Changed:', orderData)
       },
-      err => console.error(err),
-    );
-    this.router.navigate(['/admin/orders']);
+      err => {
+        console.error(err),
+        this.router.navigateByUrl('/admin/orders');
+      });
   }
 
 }
