@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="jumbotron text-center">
+      <h1 class="display-4">Welcome to the Admin Dashboard!</h1>
+      <hr class="my-4">
+      <p>Check and modify the orders or the products.</p>
+    </div>
+  </div>
+  
+  
+  <div class="card-group">
+    <div class="container">
+      <div class="row text-center">
+  
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <h5 class="card-title">Number of <br> Orders</h5>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="rotated">
+                    <fa-icon class="font-awesome-icon"
+                             [icon]="faFileInvoice"></fa-icon>
+                  </div>
+                </div>
+              </div>
+              <h1>{{orderNumbers}}</h1>
+              <div><button class="btn btn-info"
+                        routerLink="/admin/orders">
+                  Go to Orders
+                </button></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-md-6 product-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <h5 class="card-title">Number of <br> Products</h5>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="rotated">
+                    <fa-icon class="font-awesome-icon"
+                             [icon]="faShoppingCart"></fa-icon>
+                  </div>
+                </div>
+              </div>
+              <h1>{{productNumbers}}</h1>
+              <div><button class="btn btn-danger"
+                        routerLink="/admin/products">
+                  Go to Products
+                </button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  

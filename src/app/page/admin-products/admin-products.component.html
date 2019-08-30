@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Products
+        </h1>
+      </div>
+      <div class="col-2 p-3">
+        <button class="btn btn-warning" routerLink="/admin/products/new/add">Add
+          product</button>
+      </div>
+      <div class="col-4 offset-8 input-group p-3">
+  
+        <label for="search" class="p-3 align-middle">Search</label>
+        <input type="text" class="form-control" id="search"
+          [(ngModel)]="filterPhrase">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th (click)="onClickSorter('id')">Id</th>
+              <th (click)="onClickSorter('name')">Name</th>
+              <th (click)="onClickSorter('price')">Price</th>
+              <th (click)="onClickSorter('description')">Description</th>
+              <th (click)="onClickSorter('stock')">Stock</th>
+              <th (click)="onClickSorter('picture')">Picture</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let i of productsData|sort:sorterKey:sortDirection:changeCounter|search:filterPhrase:changeCounter">
+              <td>{{i.id}}</td>
+              <td>{{i.name}}</td>
+              <td>{{i.price}}</td>
+              <td>{{i.description}}</td>
+              <td>{{i.stock}}</td>
+              <td>{{i.picture}}</td>
+              <td><button class="btn btn-primary"
+                  routerLink="/admin/products/{{i.id}}">Edit</button></td>
+              <td><button class="btn btn-danger"
+                  (click)="onRemove(i)">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

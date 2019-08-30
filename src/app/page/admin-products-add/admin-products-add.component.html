@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-12 pb-5 pt-3">
+      <h1>
+        Add Product
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <form (submit)="onSubmit($event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" [(ngModel)]="addProduct.name"
+            class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" id="price" name="price"
+            [(ngModel)]="addProduct.price" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description"
+            [(ngModel)]="addProduct.description" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="stock">Stock</label>
+          <input type="number" id="stock" name="stock"
+            [(ngModel)]="addProduct.stock" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="picture">Picture</label>
+          <input type="text" id="picture" name="picture"
+            [(ngModel)]="addProduct.picture" class="form-control">
+        </div>
+        <div class="col-12 d-flex justify-content-around">
+          <button type="submit" class="btn btn-primary">Send</button>
+          <button type="button" class="btn btn-warning"
+            (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

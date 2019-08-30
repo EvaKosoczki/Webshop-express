@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 100px;
+  width: 100%;
+}
+
+.font-awesome-icon {
+  font-size: 50px;
+}
+
+.rotated {
+  transform: rotate(20deg);
+}
+
+h5 {
+  font-size: 22px;
+  padding: 20px;
+}
+
+.card,
+.jumbotron {
+  border-radius: 30px;
+}
+
+.jumbotron {
+  margin-top: 32px;
+}
+
+.jumbotron>p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .rotated {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product-card {
+    margin-top: 32px;
+  }
+}

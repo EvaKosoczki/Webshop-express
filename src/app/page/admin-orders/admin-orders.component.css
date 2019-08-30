@@ -1,0 +1,24 @@
+h1 {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.search-hover:hover {
+  cursor: pointer;
+}
+
+.search-container {
+  margin-bottom: 36px;
+}
+
+.search-buttons {
+  margin-top: 10px;
+}
+
+.start-search-button {
+  margin-right: 5px;
+}
+
+.update-button {
+  margin-right: 15px;
+}

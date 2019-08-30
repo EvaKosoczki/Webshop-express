@@ -1,0 +1,120 @@
+<h1 class="text-center">{{ title }}</h1>
+&nbsp;
+
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <input class="form-control" type="text" placeholder="Search.." [(ngModel)]="filterPhrase">
+    </div>
+    <div class=" col-3">
+      <select class="custom-select" (change)="selectSortParams()" id="sort">
+        <option value="" disabled selected>Select a sorting method</option>
+        <option value="id">ID</option>
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+        <option value="stock">Stock</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <select class="custom-select" (change)="setSortDirection()" id="dir">
+        <option value="" disabled selected>Sorting direction</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+    <div class="col-1">
+      <h3>
+        <fa-icon [icon]="faList" (click)="setListView()"></fa-icon>
+      </h3>
+    </div>
+    <div class="col-1">
+      <h3>
+        <fa-icon [icon]="faTh" (click)="setGridView()"></fa-icon>
+      </h3>
+    </div>
+  </div>
+</div>
+&nbsp;
+
+<table class="table table-striped" *ngIf="listView">
+  <thead>
+    <tr>
+      <th class="prod">
+        <div class="row">
+          <h5 (click)="setSortParams('name')">Product</h5>
+          &nbsp;
+          <fa-icon *ngIf="sorterKey === 'name'" [icon]="faSort"></fa-icon>
+        </div>
+      </th>
+      <th class="desc">
+        <h5>Description</h5>
+      </th>
+      <th class="price">
+        <div class="row">
+          <h5 (click)="setSortParams('price')">Price</h5>
+          &nbsp;
+          <fa-icon *ngIf="sorterKey === 'price'" [icon]="faSort"></fa-icon>
+        </div>
+      </th>
+      <th class="stock">
+        <div class="row">
+          <h5 (click)="setSortParams('stock')">Stock</h5>
+          &nbsp;
+          <fa-icon *ngIf="sorterKey === 'stock'" [icon]="faSort"></fa-icon>
+        </div>
+      </th>
+      <th class="buttons">
+
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products | sorter:sorterKey:sorterDirection">
+      <td class="prod">
+        <div class="row">
+          <div class="col">
+            <div>
+              <img src="../../../{{ product.picture }}" alt="Picture of {{ product.name }}" class="prod-img rounded">
+            </div>
+            <div>
+              <h5>{{ product.name }}</h5>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td class="desc">{{ product.description }}</td>
+      <td class="price">{{ product.price | customCurrency }}</td>
+      <td class="stock">{{ product.stock }}</td>
+      <td class="buttons">
+        <button class="btn btn-primary" routerLink="/products/product/{{ product.id }}">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container" *ngIf="gridView">
+  <div class="row" id="grid-row">
+    <div class="col-4 product-card" *ngFor="let product of products | sorter:sorterKey:sorterDirection">
+      <div class="row grid-name">
+        <div class="col-12">
+          <h5>{{ product.name }}</h5>
+        </div>
+      </div>
+      <div class="row grid-icon">
+        <div class="col-12">
+          <img src="./../../../{{ product.picture }}" alt="Picture of {{ product.name }}" class="rounded grid-img">
+        </div>
+      </div>
+      <div class="row grid-desc">
+        <div class="col-12">
+          {{ product.description }}
+        </div>
+      </div>
+      <div class="row grid-nums">
+        <div class="col-7">{{ product.price | customCurrency }}</div>
+        <div class="col-5">Stock: {{ product.stock }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

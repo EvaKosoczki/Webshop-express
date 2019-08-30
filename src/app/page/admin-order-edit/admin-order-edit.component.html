@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>Edit an order</h1>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-8 offset-lg-2">
+    <form action=""
+          (submit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="orderID">Order ID</label>
+        <input type="number"
+               disabled
+               name="orderID"
+               class="form-control"
+               [(ngModel)]="order.id">
+      </div>
+
+      <div class="form-group">
+        <label for="orderDate">Order Date</label>
+        <input type="string"
+               name="orderDate"
+               class="form-control"
+               [(ngModel)]="order.insdate">
+      </div>
+
+      <div class="form-group">
+        <label for="productID">Product ID</label>
+        <input type="number"
+               name="productID"
+               class="form-control"
+               [(ngModel)]="order.product">
+      </div>
+
+      <div class="form-group">
+        <label for="userName">Customer's Name</label>
+        <input type="string"
+               name="userName"
+               class="form-control"
+               [(ngModel)]="order.userName">
+      </div>
+
+      <div class="form-group">
+        <label for="userEmail">Customer's Email</label>
+        <input type="string"
+               name="userEmail"
+               class="form-control"
+               [(ngModel)]="order.userEmail">
+      </div>
+
+      <div class="form-group">
+        <label for="shippingAddress">Customer's Address</label>
+        <input type="string"
+               name="shippingAddress"
+               class="form-control"
+               [(ngModel)]="order.shippingAddress">
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Ordered Quantity</label>
+        <input type="string"
+               name="quantity"
+               class="form-control"
+               [(ngModel)]="order.quantity">
+      </div>
+      <div class="row">
+        <div class="col-6 text-center">
+          <button class="btn btn-primary">Update</button>
+        </div>
+        <div class="col-6 text-center">
+          <button class="btn btn-danger"
+                  routerLink="/admin/orders">Cancel</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
