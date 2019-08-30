@@ -1,16 +1,8 @@
 [
     {
-        "id": 1,
-        "name": "Anthon Berg Marcipános csokoládé töltelékkel 220g",
-        "price": 2150,
-        "description": "Étcsokoládéba mártott marcipán tallér barackkal brandyben.",
-        "stock": 1502,
-        "picture": "assets/anthon-berg-marcipanos-csokolade-toltelekkel.jpg"
-    },
-    {
         "id": 2,
         "name": "Heidi Bouquet tejcsokoládé desszert karamellizált egész mogyoróval 120 g",
-        "price": 999,
+        "price": "1111",
         "description": "Tejcsokoládé desszert (40%) karamellizált egész mogyoróval.",
         "stock": 74,
         "picture": "assets/heidi-flower-desszert.jpg"
@@ -94,67 +86,5 @@
         "description": "Rizstejből készült étcsokoládé. Gluténmentes, tejtermékektől mentes. Alkalmas vegánok és lisztérzékenyekmek.",
         "stock": 5,
         "picture": "assets/cocoalibre_et.jpg"
-    },
-    {
-        "id": 13,
-        "name": "",
-        "price": 0,
-        "description": "",
-        "stock": 0,
-        "picture": ""
-    },
-    {
-        "id": 14,
-        "insdate": "2019-08-27T15:18:23.168Z",
-        "product": 0,
-        "userName": "asdasd",
-        "userEmail": "asdasdasd",
-        "shippingAddress": "asdasdasd",
-        "quantity": 1
-    },
-    {
-        "id": 15,
-        "insdate": "2019-08-27T15:18:23.168Z",
-        "product": 0,
-        "userName": "asdasd",
-        "userEmail": "asdasdasd",
-        "shippingAddress": "asdasdasd",
-        "quantity": 1
-    },
-    {
-        "id": 16,
-        "insdate": "2019-08-27T15:18:23.168Z",
-        "product": 0,
-        "userName": "asdasd",
-        "userEmail": "asdasdasd",
-        "shippingAddress": "asdasdasd",
-        "quantity": 1
-    },
-    {
-        "id": 17,
-        "insdate": "2019-08-27T15:24:39.978Z",
-        "product": 0,
-        "userName": "asdasd",
-        "userEmail": "asdasdasd",
-        "shippingAddress": "asdasdasd",
-        "quantity": 1
-    },
-    {
-        "id": 18,
-        "insdate": "2019-08-27T15:26:34.539Z",
-        "product": 0,
-        "userName": "asdasd",
-        "userEmail": "asdasdasd",
-        "shippingAddress": "asdasdasd",
-        "quantity": 1
-    },
-    {
-        "id": 19,
-        "insdate": "2019-08-27T15:27:34.061Z",
-        "product": 0,
-        "userName": "asdasd",
-        "userEmail": "asdasdasd",
-        "shippingAddress": "asdasdasd",
-        "quantity": "13"
     }
 ]
