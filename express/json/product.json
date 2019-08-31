@@ -1,0 +1,106 @@
+[
+    {
+        "id": 2,
+        "name": "Heidi Bouquet tejcsokoládé desszert karamellizált egész mogyoróval 120 g",
+        "price": 999,
+        "description": "Tejcsokoládé desszert (40%) karamellizált egész mogyoróval.",
+        "stock": 74,
+        "picture": "assets/heidi-flower-desszert.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Anthon Berg Likőrös Kávéval Töltött Étcsokoládé Üvegek 187g (12db-os)",
+        "price": 3190,
+        "description": "Az Anthon Berg alkoholos kávéval – ír kávé (whisky) - francia kávé (narancslikőr) - kubai kávé (rum) - mexikói kávé (tequila).",
+        "stock": 2051,
+        "picture": "assets/anthon-berg-likoros-kaveval-toltott-etcsokolade-uvegek.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Anthon Berg Koktéllal Töltött Étcsokoládé Üvegek 125g (8db-os)",
+        "price": 1990,
+        "description": "Koktélkrémmel töltött csokoládé: B52 - Cosmopolitan - Margarita - Strawberry Daiquiri.",
+        "stock": 9,
+        "picture": "assets/anthon-berg-koktellal-toltott-etcsokolade-uvegek.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Birkás Cserszegi fűszeres borcsokoládé 100g",
+        "price": 1750,
+        "description": "Egyedileg kézzel készített - Cserszegi fűszeres bor a csokoládéba keverve.",
+        "stock": 34,
+        "picture": "assets/cserszegi.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Butlers Pezsgős trüffel válogatás 200g",
+        "price": 4190,
+        "description": "Pazar rózsaszín pezsgős trüffelek ropogós fehércsokoládé héjba rejtve.",
+        "stock": 858,
+        "picture": "assets/butlers_rozsaszin.jpg"
+    },
+    {
+        "id": 7,
+        "name": "SWEETIC - Guava-joghurt karamellizált fehércsokoládé burokban ",
+        "price": 350,
+        "description": "Karamellizált fehércsokoládé (Dulcey-Valrhona) burokban guava gyümölcsből készített krémesen lágy zselé és fehércsokoládé alapú joghurtos ganache.",
+        "stock": 8749,
+        "picture": "assets/guava-joghurt.jpg"
+    },
+    {
+        "id": 8,
+        "name": "SWEETIC - Kahlua kávélikőrös bonbon",
+        "price": 3501,
+        "description": "Kakaóbab formájú bonbon belsejében Kahlua kávélikőrös töltelékkel.",
+        "stock": 7961,
+        "picture": "assets/kahlua.jpg"
+    },
+    {
+        "id": 9,
+        "name": "CONSCIOUS - Lions raw",
+        "price": 1870,
+        "description": "Citrom-, grapefruit- és lime olajjal ízesített raw étcsokládé cukor helyett rizssziruppal édesítve. Tejmentes.",
+        "stock": 94,
+        "picture": "assets/Conscious-lions-raw.jpg"
+    },
+    {
+        "id": 10,
+        "name": "SWEETIC - Paleo diabetikus étcsokoládé (83,9%) pörkölt törökmogyoróval 40g",
+        "price": 1190,
+        "description": "A paleo étrendet követők és a diabéteszesek is bátran fogyaszthatják ezt a magas kakaó szárazanyagtartalmú étcsokoládét, melynek a glikémiás indexe 0.",
+        "stock": 233,
+        "picture": "assets/paleo.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Csokoládészív gyümölcsökkel 150g",
+        "price": 1990,
+        "description": "Szív alakú 33,6%-os tejcsokoládétábla, gazdagon megszórva liofilizált málnával, eperrel és piros ribizlivel.",
+        "stock": 57,
+        "picture": "assets/csokisziv.jpg"
+    },
+    {
+        "id": 12,
+        "name": "COCOALIBRE - 50%-os étcsokoládé 50g",
+        "price": 1370,
+        "description": "Rizstejből készült étcsokoládé. Gluténmentes, tejtermékektől mentes. Alkalmas vegánok és lisztérzékenyekmek.",
+        "stock": 5,
+        "picture": "assets/cocoalibre_et.jpg"
+    },
+    {
+        "id": 13,
+        "name": "COCOALIBRE - 50%-os étcsokoládé 50g",
+        "price": 0,
+        "description": "Rizstejből készült étcsokoládé. Gluténmentes, tejtermékektől mentes. Alkalmas vegánok és lisztérzékenyekmek.",
+        "stock": 20,
+        "picture": "assets/paleo.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Anthon Berg Marcipános csokoládé töltelékkel 220g",
+        "price": 0,
+        "description": "Étcsokoládéba mártott marcipán tallér barackkal brandyben.",
+        "stock": 11,
+        "picture": ""
+    }
+]
