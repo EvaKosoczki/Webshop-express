@@ -2,49 +2,65 @@ var express = require('express');
 var router = express.Router();
 var db = require('./../handler/evi-db')
 
-router.get('/:entity/:id', (req, res, next) => {
+router.get('/:entity/:id', async (req, res, next) => {
   let databaseSmp = new db.DataBase(req.params.entity)
   let id = req.params.id || 0
-  databaseSmp.readJson(id).then(
-    data => res.json(data),
-    err => res.json(err)
-  )
+  let oneData = null;
+  try {
+    oneData = await databaseSmp.readJson(id)
+  } catch (err) {
+    res.statusCode = 404;
+    return res.send(err)
+  }
+  res.json(oneData)
 })
 
-router.get('/:entity', (req, res, next) => {
+router.get('/:entity', async (req, res, next) => {
   let databaseSmp = new db.DataBase(req.params.entity)
-
-  databaseSmp.readJson().then(
-    data => res.json(data),
-    err => res.json(err)
-  )
+  let data = [];
+  try {
+    data = await databaseSmp.readJson()
+  } catch (err) {
+    res.statusCode = 404;
+    return res.send(err)
+  }
+  res.json(data)
 })
 
-router.post('/:entity/:id', (req, res, next) => {
+router.post('/:entity/:id', async (req, res, next) => {
   let body = req.body;
   let databaseSmp2 = new db.DataBase(req.params.entity)
-  databaseSmp2.editJSON(body).then(
-    data => res.send('Got the data'),
-    err => res.json(err)
-  )
+  try {
+    await databaseSmp2.editJSON(body)
+  } catch (err) {
+    res.statusCode = 404;
+    return res.send(err)
+  }
+  res.send("Got the data")
 })
 
-router.delete('/:entity/:id', (req, res, next) => {
+router.delete('/:entity/:id', async (req, res, next) => {
   let databaseSmp3 = new db.DataBase(req.params.entity)
   let id = req.params.id || 0
-  databaseSmp3.deleteJSON(id).then(
-    data => res.json(data),
-    err => res.json(err)
-  )
+  try {
+    await databaseSmp3.deleteJSON(id)
+  } catch (err) {
+    res.statusCode = 404;
+    return res.send(err)
+  }
+  res.send()
 })
 
-router.post('/:entity', (req, res, next) => {
+router.post('/:entity', async (req, res, next) => {
   let databaseSmp4 = new db.DataBase(req.params.entity)
   let body = req.body
-  databaseSmp4.addJSON(body).then(
-    data => res.send('Got the new data'),
-    err => res.json(err)
-  )
+  try {
+    await databaseSmp4.addJSON(body)
+  } catch {
+    res.statusCode = 404;
+    return res.send(err)
+  }
+  res.send("Got the new data")
 })
 
 module.exports = router;
